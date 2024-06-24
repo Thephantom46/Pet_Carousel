@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- ImageView to display the dog image -->
+    <!-- ImageView to display the pet image -->
     <ImageView
-        android:id="@+id/dogImageView"
+        android:id="@+id/petImageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:contentDescription="Dog Image"
+        android:contentDescription="Pet Image"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"/>
 
@@ -20,9 +20,9 @@
         android:id="@+id/fetchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dogImageView"
+        android:layout_below="@id/petImageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Fetch New Dog Image"/>
+        android:text="Fetch New pet Image"/>
 
 </RelativeLayout>

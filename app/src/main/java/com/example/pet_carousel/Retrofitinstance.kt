@@ -5,11 +5,19 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInstance {
 
-    private const val BASE_URL = "https://dog.ceo/"
+    private const val BASE_URL_DOG = "https://dog.ceo/"
+    private const val BASE_URL_CAT = "https://api.thecatapi.com/"
 
-    val retrofit: Retrofit by lazy {
+    val retrofitdog: Retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BASE_URL_DOG)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
+    val retrofitcat: Retrofit by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL_CAT)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
